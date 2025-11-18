@@ -25,8 +25,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Disable Jekyll
-        run: touch ./out/.nojekyll
+      # - name: Disable Jekyll
+      #   run: touch ./out/.nojekyll
 
       - name: Checkout
         uses: actions/checkout@v4
