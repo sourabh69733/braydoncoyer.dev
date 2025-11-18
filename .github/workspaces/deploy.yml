@@ -25,6 +25,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Disable Jekyll
+        run: touch ./out/.nojekyll
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -42,9 +45,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Disable Jekyll
-        run: touch ./out/.nojekyll
 
       - name: Setup Pages
         id: setup_pages
